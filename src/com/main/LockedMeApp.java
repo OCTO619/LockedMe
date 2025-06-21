@@ -30,7 +30,7 @@ public class LockedMeApp {
                     break;
 
                 case 3:
-                	System.out.println("Thank you! Exiting LockedMe.com...");
+                	System.out.println("Exiting LockedMe.com...");
                     sc.close();
                     System.exit(0);
                 default:
