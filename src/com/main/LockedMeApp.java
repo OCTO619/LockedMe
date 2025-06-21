@@ -1,7 +1,6 @@
 package com.main;
 
 import java.util.Scanner;
-
 import com.service.FileManager;
 import com.service.SubMenu;
 
@@ -41,7 +40,7 @@ public class LockedMeApp {
             }
         System.out.println("do you want to continue(y/n)");
 		con = sc.next();
-	}while(con.equals("y"));
+        	}		while(con.equals("y"));
 	System.out.println("Thank you!");
         sc.close();
 	}

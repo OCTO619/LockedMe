@@ -6,8 +6,8 @@ public class SubMenu {
 	
 	public void showFileOperations(Scanner sc) {
 		
-		Scanner s=new Scanner(System.in);
-		FileManager fm=new FileManager();
+		 Scanner s=new Scanner(System.in);
+		 FileManager fm=new FileManager();
 		 int choice;
 		 String result;
 		 String filename;
