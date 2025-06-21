@@ -5,14 +5,17 @@ import java.util.Scanner;
 import com.service.FileManager;
 import com.service.SubMenu;
 
+
 public class LockedMeApp {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
+			
 		FileManager fm=new FileManager();
 		SubMenu sm=new SubMenu();
 		System.out.println("  Welcome to LockedMe.com");
         System.out.println("  Developer: Ishita Singh");
+       
         String con="";
         int choice;
         do {

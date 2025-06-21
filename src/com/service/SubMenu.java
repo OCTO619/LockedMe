@@ -1,26 +1,52 @@
 package com.service;
-
 import java.util.Scanner;
+import com.model.MyFile;
 
 public class SubMenu {
+	
 	public void showFileOperations(Scanner sc) {
+		
 		Scanner s=new Scanner(System.in);
+		FileManager fm=new FileManager();
 		 int choice;
+		 String result;
+		 String filename;
 		while(true) {
 			 System.out.println("\nFile Operations:\n1:Add file\n2: Search file\n3: Delete file\n4: Return to menu");
 			 System.out.print("Enter your choice: ");
 			 choice = s.nextInt();
 	            sc.nextLine();  
 	            switch(choice) {
+	            
 	            case 1: 
-	            	addFile(s);
-	                break;
+	            	System.out.println("Add File");
+	            	System.out.println("Enter the file name");
+				filename = sc.next();
+				MyFile f = new MyFile(filename);
+				result = fm.addFile(f);
+				System.out.println(result);
+				break;
+				
 	            case 2:
-	            	searchFile(s);
-	                break;
+	            	System.out.println("Search file");
+	            	System.out.println("Enter the file name");
+				filename = sc.next();
+				MyFile file=fm.searchFile(filename);
+				if(file==null) {
+					System.out.println("File not present");
+				}else {
+					System.out.println(file);  
+				}
+				break;
+	       
 	            case 3:
-	            	deleteFile(s);
-	                break;
+	            	System.out.println("Delete File");
+	            	System.out.println("Enter the filename");
+					filename = s.next();
+			        result = fm.deleteFile(filename);
+			        System.out.println(result);
+			        break;
+	    
 	            case 4:
 	            	 System.out.println("returning to menu");
 	            return;
@@ -28,4 +54,6 @@ public class SubMenu {
 	            }  		
 		}
 	}
+
+	
 }
