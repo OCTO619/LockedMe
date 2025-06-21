@@ -8,8 +8,7 @@ import com.service.SubMenu;
 public class LockedMeApp {
 
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-			
+		Scanner sc=new Scanner(System.in);		
 		FileManager fm=new FileManager();
 		SubMenu sm=new SubMenu();
 		System.out.println("  Welcome to LockedMe.com");

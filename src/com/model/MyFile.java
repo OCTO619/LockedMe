@@ -21,6 +21,5 @@ public class MyFile {
 		super();
 		this.filename = filename;
 	}
-
 	
 }

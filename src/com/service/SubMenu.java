@@ -15,7 +15,8 @@ public class SubMenu {
 			 System.out.println("\nFile Operations:\n1:Add file\n2: Search file\n3: Delete file\n4: Return to menu");
 			 System.out.print("Enter your choice: ");
 			 choice = s.nextInt();
-	            sc.nextLine();  
+	            
+			 	sc.nextLine();  
 	            switch(choice) {
 	            
 	            case 1: 
