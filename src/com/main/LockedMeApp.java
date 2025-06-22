@@ -17,6 +17,7 @@ public class LockedMeApp {
         String con="";
         int choice;
         do {
+        	try {
             System.out.println("\nMain Menu:\n1: View Files in Ascending Order\n2: File Operations\n3: Exit");
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
@@ -34,12 +35,16 @@ public class LockedMeApp {
                 	System.out.println("Exiting LockedMe.com...");
                     sc.close();
                     System.exit(0);
-                default:
+               default:
                     System.out.println("Invalid choice. Try again.");
             }
+        	}catch(Exception e) {
+        		System.out.println("Invalid input! Please enter a number (1–3).");
+                sc.nextLine();
+        	}
         System.out.println("do you want to continue(y/n)");
 		con = sc.next();
-        	}		while(con.equals("y"));
+        	}		while(con.equalsIgnoreCase("y"));
 	System.out.println("Thank you!");
         sc.close();
 	}

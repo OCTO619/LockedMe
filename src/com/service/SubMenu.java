@@ -15,6 +15,7 @@ public class SubMenu {
 		 String filename;
 		
 		while(true) {
+			try {
 			 System.out.println("\nFile Operations:\n1: Add file\n2: Search file\n3: Delete file\n4: Return to menu");
 			 System.out.print("Enter your choice: ");
 			 choice = s.nextInt();
@@ -55,7 +56,11 @@ public class SubMenu {
 	            	 System.out.println("returning to menu..");
 	            return;
 	            default:System.out.println("Invalid choice.");
-	            }  		
+	            }  
+			}catch(Exception e) {
+				System.out.println("Invalid input! Please try again.");
+                sc.nextLine();
+			}
 		}
 	}
 
