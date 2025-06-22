@@ -1,4 +1,5 @@
 package com.service;
+
 import java.util.Scanner;
 import com.model.MyFile;
 
@@ -59,10 +60,8 @@ public class SubMenu {
 	            }  
 			}catch(Exception e) {
 				System.out.println("Invalid input! Please try again.");
-                sc.nextLine();
+                s.nextLine();
 			}
 		}
-	}
-
-	
+	}	
 }
