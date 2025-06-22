@@ -15,7 +15,7 @@ import com.model.MyFile;
 public class FileManager {
 	List<MyFile> listOfFiles = new ArrayList<MyFile>();
 	
-	public List<MyFile> listFiles() {
+	public List<MyFile> listOfFiles() {
 		 // case-insensitive file name sorting
 		Collections.sort(listOfFiles, Comparator.comparing(f -> f.getFilename().toLowerCase()));
 
